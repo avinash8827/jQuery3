@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            .parent{
+                font-size: 3em;
+                border:1px solid red;
+                padding: 10px;
+            }
+            .child{
+                border:1px solid green;
+                padding: 10px;
+            }
+            .grandchild{
+                border:1px dashed blue;
+                padding: 10px;
+            } 
+        </style>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    </head>
+    <body>
+        <div class="parent">
+            parent
+            <div class="child">
+                child
+                <div class="grandchild">grandchild</div>
+                <div class="grandchild">grandchild</div>
+                <div class="grandchild">grandchild</div>
+            </div>
+            <div class="child2">
+                child2
+                <div class="grandchild2">grandchild2</div>
+                <div class="grandchild2">grandchild2</div>
+                <div class="grandchild2">grandchild2</div>
+            </div>
+        </div>
+        <script>
+            (function(){
+               // alert('page lodedsuccessfully')
+               var a = $('.grandchild').parent();
+               console.log(a);
+               var b = $('.grandchild2').parent();
+               console.log(b);
+               a.css('border',"5px solid red");
+               b.css('border',"5px solid green");
+               
+            })(jQuery);
+        </script>
+    </body>
+</html>
